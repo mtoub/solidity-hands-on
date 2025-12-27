@@ -1,0 +1,1110 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "defaultAdmin_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "cpAdmin_",
+						"type": "address"
+					}
+				],
+				"name": "ConditionPrecedent_init",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "defaultAdmin_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "oracleAdmin_",
+						"type": "address"
+					}
+				],
+				"name": "RateOracle_init",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_drawdownId",
+						"type": "uint256"
+					}
+				],
+				"name": "accrueInterest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_drawdownIds",
+						"type": "uint256[]"
+					}
+				],
+				"name": "accrueInterestBatch",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "lender_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "borrower_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalCommitment_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum RateType",
+						"name": "rateType_",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fixedRateBps_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "spreadBps_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "arrangementFeeBps_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "commitmentFeeBps_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "monitoringFeeAnnualAmount_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "availabilityDuration_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gracePeriod_",
+						"type": "uint256"
+					}
+				],
+				"name": "activateFacility",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					}
+				],
+				"name": "addCondition",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_drawdownId",
+						"type": "uint256"
+					}
+				],
+				"name": "approveDrawdown",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_drawdownId",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateAccruedInterest",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_duration",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateCommitmentFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "calculateCurrentInterestRate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "drawdownId",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateInterestForDrawdown",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "interest",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_duration",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateMonitoringFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "drawdownId",
+						"type": "uint256"
+					}
+				],
+				"name": "calculatePendingInterest",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "interest",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_drawdownId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_reason",
+						"type": "string"
+					}
+				],
+				"name": "declareDefault",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "target",
+								"type": "address"
+							},
+							{
+								"internalType": "enum FacetCutAction",
+								"name": "action",
+								"type": "uint8"
+							},
+							{
+								"internalType": "bytes4[]",
+								"name": "selectors",
+								"type": "bytes4[]"
+							}
+						],
+						"internalType": "struct FacetCut[]",
+						"name": "facetCuts",
+						"type": "tuple[]"
+					},
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "diamondCut",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "facetAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "facet",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "facetAddresses",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "addresses",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "facet",
+						"type": "address"
+					}
+				],
+				"name": "facetFunctionSelectors",
+				"outputs": [
+					{
+						"internalType": "bytes4[]",
+						"name": "selectors",
+						"type": "bytes4[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "facets",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "target",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes4[]",
+								"name": "selectors",
+								"type": "bytes4[]"
+							}
+						],
+						"internalType": "struct Facet[]",
+						"name": "diamondFacets",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getArrangementFeeAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_cpId",
+						"type": "uint256"
+					}
+				],
+				"name": "getCondition",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "docHash",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "bool",
+								"name": "isSatisfied",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint256",
+								"name": "satisfiedAt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "docReference",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Condition",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_drawdownId",
+						"type": "uint256"
+					}
+				],
+				"name": "getDrawdown",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "principalRequested",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "principalOutstanding",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "requestDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "disbursementDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "maturityDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "fiatReference",
+								"type": "string"
+							},
+							{
+								"internalType": "enum DrawdownStatus",
+								"name": "status",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "accruedInterest",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "paidInterest",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "lastAccrualDate",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Drawdown",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getFacilityTerms",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "totalCommitment",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "availableAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum RateType",
+								"name": "rateType",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fixedRateBps",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "spreadBps",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "arrangementFeeBps",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "commitmentFeeBps",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "monitoringFeeAnnualAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "availabilityPeriodEnd",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "gracePeriodSeconds",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FacilityTerms",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_drawdownId",
+						"type": "uint256"
+					}
+				],
+				"name": "getInterestSummary",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "drawdownId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "principalOutstanding",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "accruedInterest",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "paidInterest",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "unpaidInterest",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "currentRateBps",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "lastAccrualDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "daysSinceLastAccrual",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct InterestSummary",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLatestRate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "rate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPendingConditions",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "getRate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					}
+				],
+				"name": "getRoleAdmin",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "getRoleMember",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					}
+				],
+				"name": "getRoleMemberCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalUnpaidInterest",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "grantRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "hasRole",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "invoiceArrangement",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isFacilityLive",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "payArrangement",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_drawdownId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_fiatRef",
+						"type": "string"
+					}
+				],
+				"name": "recordDisbursement",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_drawdownId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "recordInterestPayment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_drawdownId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "recordRepayment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "reinstateFacility",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_drawdownId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_reason",
+						"type": "string"
+					}
+				],
+				"name": "rejectDrawdown",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					}
+				],
+				"name": "renounceRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "requestDrawdown",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_cpId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_reason",
+						"type": "string"
+					}
+				],
+				"name": "revokeCondition",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "revokeRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_cpId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_docHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "_docRef",
+						"type": "string"
+					}
+				],
+				"name": "satisfyCondition",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_reason",
+						"type": "string"
+					}
+				],
+				"name": "suspendFacility",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_reason",
+						"type": "string"
+					}
+				],
+				"name": "terminateFacility",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_rate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "updateRate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Useful for explicit ABI generation or audits without following inherited interfaces.",
+			"kind": "dev",
+			"methods": {},
+			"title": "ICreditFacilitySystemExplicit",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Flattened interface that lists every external function exposed by the CreditFacilitySystem diamond.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ICreditFacilitySystemExplicit.sol": "ICreditFacilitySystemExplicit"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ICreditFacilitySystemExplicit.sol": {
+			"keccak256": "0xe5f5045ecaa00aa33b5c761fc43d4113bbb13e9a5e4b87d58973947136b66c0f",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://bacfcc34ca717ec888cb2e5bb3f9c90fcb00778a2e9a01b29cab7c703c6d4db1",
+				"dweb:/ipfs/QmQXN6CAVY85WPcsrgE8zhyRNisTVtC68D1zjgvMacFZn8"
+			]
+		}
+	},
+	"version": 1
+}

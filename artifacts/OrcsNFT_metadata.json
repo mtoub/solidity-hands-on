@@ -1,0 +1,677 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_baseTokenURI",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_initialOwner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_approved",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_operator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "_approved",
+						"type": "bool"
+					}
+				],
+				"name": "ApprovalForAll",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_approved",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "baseTokenUri",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getApproved",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_operator",
+						"type": "address"
+					}
+				],
+				"name": "isApprovedForAll",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerOf",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_operator",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_approved",
+						"type": "bool"
+					}
+				],
+				"name": "setApprovalForAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "This emits when the approved address for an NFT is changed or  reaffirmed. The zero address indicates there is no approved address.  When a Transfer event emits, this also indicates that the approved  address for that NFT (if any) is reset to none."
+				},
+				"ApprovalForAll(address,address,bool)": {
+					"details": "This emits when an operator is enabled or disabled for an owner.  The operator can manage all NFTs of the owner."
+				},
+				"OwnershipTransferred(address,address)": {
+					"details": "This emits when ownership of a contract changes.    "
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "This emits when ownership of any NFT changes by any mechanism.  This event emits when NFTs are created (`from` == 0) and destroyed  (`to` == 0). Exception: during contract creation, any number of NFTs  may be created and assigned without emitting Transfer. At the time of  any transfer, the approved address for that NFT (if any) is reset to none."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"approve(address,uint256)": {
+					"details": "The zero address indicates there is no approved address.  Throws unless `msg.sender` is the current NFT owner, or an authorized  operator of the current owner.",
+					"params": {
+						"_approved": "The new approved NFT controller",
+						"_tokenId": "The NFT to approve"
+					}
+				},
+				"balanceOf(address)": {
+					"details": "NFTs assigned to the zero address are considered invalid, and this  function throws for queries about the zero address.",
+					"params": {
+						"_owner": "An address for whom to query the balance"
+					},
+					"returns": {
+						"_0": "The number of NFTs owned by `_owner`, possibly zero"
+					}
+				},
+				"getApproved(uint256)": {
+					"details": "Throws if `_tokenId` is not a valid NFT.",
+					"params": {
+						"_tokenId": "The NFT to find the approved address for"
+					},
+					"returns": {
+						"_0": "The approved address for this NFT, or the zero address if there is none"
+					}
+				},
+				"isApprovedForAll(address,address)": {
+					"params": {
+						"_operator": "The address that acts on behalf of the owner",
+						"_owner": "The address that owns the NFTs"
+					},
+					"returns": {
+						"_0": "True if `_operator` is an approved operator for `_owner`, false otherwise"
+					}
+				},
+				"ownerOf(uint256)": {
+					"details": "NFTs assigned to zero address are considered invalid, and queries  about them do throw.",
+					"params": {
+						"_tokenId": "The identifier for an NFT"
+					},
+					"returns": {
+						"owner": "The address of the owner of the NFT"
+					}
+				},
+				"safeTransferFrom(address,address,uint256)": {
+					"details": "This works identically to the other function with an extra data parameter,  except this function just sets data to \"\".",
+					"params": {
+						"_from": "The current owner of the NFT",
+						"_to": "The new owner",
+						"_tokenId": "The NFT to transfer"
+					}
+				},
+				"setApprovalForAll(address,bool)": {
+					"details": "Emits the ApprovalForAll event. The contract MUST allow  multiple operators per owner.",
+					"params": {
+						"_approved": "True if the operator is approved, false to revoke approval",
+						"_operator": "Address to add to the set of authorized operators"
+					}
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Throws unless `msg.sender` is the current owner, an authorized  operator, or the approved address for this NFT. Throws if `_from` is  not the current owner. Throws if `_to` is the zero address. Throws if  `_tokenId` is not a valid NFT.",
+					"params": {
+						"_from": "The current owner of the NFT",
+						"_to": "The new owner",
+						"_tokenId": "The NFT to transfer"
+					}
+				},
+				"transferOwnership(address)": {
+					"details": "Set _newOwner to address(0) to renounce any ownership.",
+					"params": {
+						"_newOwner": "The address of the new owner of the contract    "
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"approve(address,uint256)": {
+					"notice": "Change or reaffirm the approved address for an NFT"
+				},
+				"balanceOf(address)": {
+					"notice": "Count all NFTs assigned to an owner"
+				},
+				"getApproved(uint256)": {
+					"notice": "Get the approved address for a single NFT"
+				},
+				"isApprovedForAll(address,address)": {
+					"notice": "Query if an address is an authorized operator for another address"
+				},
+				"owner()": {
+					"notice": "Get the address of the owner    "
+				},
+				"ownerOf(uint256)": {
+					"notice": "Find the owner of an NFT"
+				},
+				"safeTransferFrom(address,address,uint256)": {
+					"notice": "Transfers the ownership of an NFT from one address to another address"
+				},
+				"setApprovalForAll(address,bool)": {
+					"notice": "Enable or disable approval for a third party (\"operator\") to manage  all of `msg.sender`'s assets"
+				},
+				"transferFrom(address,address,uint256)": {
+					"notice": "Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE  THEY MAY BE PERMANENTLY LOST"
+				},
+				"transferOwnership(address)": {
+					"notice": "Set the address of the new owner of the contract"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/OrcsNFT.sol": "OrcsNFT"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/Panic.sol": {
+			"keccak256": "0xf7fe324703a64fc51702311dc51562d5cb1497734f074e4f483bfb6717572d7a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c6a5ff4f9fd8649b7ee20800b7fa387d3465bd77cf20c2d1068cd5c98e1ed57a",
+				"dweb:/ipfs/QmVSaVJf9FXFhdYEYeCEfjMVHrxDh5qL4CGkxdMWpQCrqG"
+			]
+		},
+		"@openzeppelin/contracts/utils/Strings.sol": {
+			"keccak256": "0xad148d59f05165f9217d0a9e1ac8f772abb02ea6aaad8a756315c532bf79f9f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://15e3599867c2182f5831e9268b274b2ef2047825837df6b4d81c9e89254b093e",
+				"dweb:/ipfs/QmZbL7XAYr5RmaNaooPgZRmcDXaudfsYQfYD9y5iAECvpS"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/Math.sol": {
+			"keccak256": "0x1225214420c83ebcca88f2ae2b50f053aaa7df7bd684c3e878d334627f2edfc6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c5fab4970634f9ab9a620983dc1c8a30153981a0b1a521666e269d0a11399d3",
+				"dweb:/ipfs/QmVRnBC575MESGkEHndjujtR7qub2FzU9RWy9eKLp4hPZB"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/SafeCast.sol": {
+			"keccak256": "0x195533c86d0ef72bcc06456a4f66a9b941f38eb403739b00f21fd7c1abd1ae54",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b1d578337048cad08c1c03041cca5978eff5428aa130c781b271ad9e5566e1f8",
+				"dweb:/ipfs/QmPFKL2r9CBsMwmUqqdcFPfHZB2qcs9g1HDrPxzWSxomvy"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/SignedMath.sol": {
+			"keccak256": "0xb1970fac7b64e6c09611e6691791e848d5e3fe410fa5899e7df2e0afd77a99e3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://db5fbb3dddd8b7047465b62575d96231ba8a2774d37fb4737fbf23340fabbb03",
+				"dweb:/ipfs/QmVUSvooZKEdEdap619tcJjTLcAuH6QBdZqAzWwnAXZAWJ"
+			]
+		},
+		"contracts/OrcsNFT.sol": {
+			"keccak256": "0x817a44495dd8c3b56a199a8b4b3053d2114469f2321732424d63bc3a456eb483",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5c53556ab98944b58d9e7dce013f8e50b07701da04ecbd5bba60df1e9ed252f0",
+				"dweb:/ipfs/QmZsnDXt2JcYfcLKbmawLEed5V3V3MyELJm9gdWy9AHdyd"
+			]
+		},
+		"contracts/Ownable.sol": {
+			"keccak256": "0xed6758646d74b852ec559c05bc324bf0150b842979662247d3ef97df1af0ade3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2e526d1d2fd773a9f9cf90fd4166cb3da864ddaff23ac387353f9a5fbb36a769",
+				"dweb:/ipfs/QmeewKGzYZ1H4JSuM2D9aJTR79Ap3xPvVppYnGd1vuY3yJ"
+			]
+		},
+		"contracts/interfaces/IERC173.sol": {
+			"keccak256": "0xaf1b7805887d74c17b909b898dbe029c644a636f4e0c615c144c771fbeae34a3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6d353452ee3c7ade73252ae882a336329000d604feae767f8053789ff2e51baa",
+				"dweb:/ipfs/QmTyaSA9eHAJYdTeZxDQfQRRNYtKRDDiW8scazRfLTiTkk"
+			]
+		},
+		"contracts/interfaces/IERC721Receiver.sol": {
+			"keccak256": "0x4de937604b2dc1fcf38b71ea6a5d67f26500358746352a5a97a7793a54d572b0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://15bac02d0bfb027076fae3234f8c2b12bafd4a9f80b5606cb8835b6a33d98dcf",
+				"dweb:/ipfs/Qmek5wjphm37Lh7YAQmLx528tTXwegs5hrMU3xqqnviLRC"
+			]
+		},
+		"contracts/interfaces/IMetadata.sol": {
+			"keccak256": "0xea826bd6705af335fce645074f97569f856aabab7be9bf108ac3e0dc36342c09",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://30186df1ad6f5b1158867b4821e07744523e7e883626bb562436181ae4e746e1",
+				"dweb:/ipfs/QmQFwqWsrz9MXNbM21KAbqHXeaw3Z7qMXLmdrvEsTRpDqw"
+			]
+		},
+		"contracts/interfaces/IOrcsNFT.sol": {
+			"keccak256": "0xdc6ac68e8f2af92c8ad5b2871fd83e353f3fb77cba163899525a168732fff42b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c576fabf40450a59311f3db340611a358332c450eba0264afd808f4425af8446",
+				"dweb:/ipfs/QmNm2pmLUwG8hgKyq3PS9VsJEbbDnrg8Agb32fCh1F81tS"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,133 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"OwnershipTransferred(address,address)": {
+					"details": "This emits when ownership of a contract changes.    "
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"transferOwnership(address)": {
+					"details": "Set _newOwner to address(0) to renounce any ownership.",
+					"params": {
+						"_newOwner": "The address of the new owner of the contract    "
+					}
+				}
+			},
+			"stateVariables": {
+				"owner": {
+					"return": "The address of the owner.",
+					"returns": {
+						"_0": "The address of the owner."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"owner()": {
+					"notice": "Get the address of the owner    "
+				},
+				"transferOwnership(address)": {
+					"notice": "Set the address of the new owner of the contract"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Ownable.sol": "Ownable"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Ownable.sol": {
+			"keccak256": "0xed6758646d74b852ec559c05bc324bf0150b842979662247d3ef97df1af0ade3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2e526d1d2fd773a9f9cf90fd4166cb3da864ddaff23ac387353f9a5fbb36a769",
+				"dweb:/ipfs/QmeewKGzYZ1H4JSuM2D9aJTR79Ap3xPvVppYnGd1vuY3yJ"
+			]
+		},
+		"contracts/interfaces/IERC173.sol": {
+			"keccak256": "0xaf1b7805887d74c17b909b898dbe029c644a636f4e0c615c144c771fbeae34a3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6d353452ee3c7ade73252ae882a336329000d604feae767f8053789ff2e51baa",
+				"dweb:/ipfs/QmTyaSA9eHAJYdTeZxDQfQRRNYtKRDDiW8scazRfLTiTkk"
+			]
+		}
+	},
+	"version": 1
+}
