@@ -23,6 +23,11 @@
 						"type": "string"
 					},
 					{
+						"internalType": "uint256",
+						"name": "_maxToken",
+						"type": "uint256"
+					},
+					{
 						"internalType": "address",
 						"name": "_initialOwner",
 						"type": "address"
@@ -126,6 +131,19 @@
 				"type": "event"
 			},
 			{
+				"inputs": [],
+				"name": "MAX_TOKEN",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -164,7 +182,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "baseTokenUri",
+				"name": "baseTokenURI",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -625,11 +643,11 @@
 			]
 		},
 		"contracts/OrcsNFT.sol": {
-			"keccak256": "0x817a44495dd8c3b56a199a8b4b3053d2114469f2321732424d63bc3a456eb483",
+			"keccak256": "0x2fd06193b41d7786d7dc05fc801dc2dee79821597f376308ec735a9c5783f056",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5c53556ab98944b58d9e7dce013f8e50b07701da04ecbd5bba60df1e9ed252f0",
-				"dweb:/ipfs/QmZsnDXt2JcYfcLKbmawLEed5V3V3MyELJm9gdWy9AHdyd"
+				"bzz-raw://41a9497cdee245e3b0551f41a119c36d20a028cc65f0d668aa28fec9fd3f8c46",
+				"dweb:/ipfs/QmdxNY8N6Sze7WhCnECvpY4GB1cq415HDmfD6vL8wJ54qy"
 			]
 		},
 		"contracts/Ownable.sol": {

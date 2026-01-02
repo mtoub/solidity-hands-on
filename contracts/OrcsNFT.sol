@@ -12,31 +12,37 @@ contract OrcsNFT is IOrcsNFT, Ownable {
 
     using Strings for uint256;
 
+    uint256 public immutable MAX_TOKEN;
+
     string public name;  // function name() view public returns (string memory);
     string public symbol;  // function symbol() view public returns (string memory);
-    string public baseTokenUri;  // function baseTokenURI() view public returns (string memory);
+    string public baseTokenURI;  // function baseTokenURI() view public returns (string memory);
 
     mapping(address => uint256) private _balances; 
     mapping(uint256 => address) private _owners;
     mapping(uint256 => address) private _operators;
     mapping(address => mapping(address => bool)) private _approvedForAll;
 
-    constructor(string memory _name, string memory _symbol, string memory _baseTokenURI, address _initialOwner) Ownable(_initialOwner) {
+
+    constructor(string memory _name, string memory _symbol, string memory _baseTokenURI, uint256 _maxToken, address _initialOwner) Ownable(_initialOwner) {
         name = _name;
         symbol = _symbol;
-        // baseTokenURI =_baseTokenURI;
+        baseTokenURI =_baseTokenURI;
+        MAX_TOKEN = _maxToken;
     } 
 
-    // TODO tokenURI: tokenId -> carachteristics (off-chain, uri/url)
 
     function tokenURI(uint256 _tokenId) public view returns (string memory) {
-    return string.concat(
-        baseTokenUri,
-        Strings.toString(_tokenId)
-    );
+        address owner = _owners[_tokenId];
+        require(owner != address(0), "OrcsNFT: NFT doesn't exist");
+        return string.concat(
+            baseTokenURI,
+            Strings.toString(_tokenId)
+        );
     }
 
     function mint(address _to, uint256 _tokenId) public onlyOwner {
+        require(_tokenId <= MAX_TOKEN, "OrcsNFT: NFT doesn't exist");
         require(_to != address(0), "OrcsNFT: minting to zero address");
         require(_owners[_tokenId] == address(0), "OrcsNFT: Token already exist");
         _balances[_to] += 1; 
